@@ -1,7 +1,7 @@
-import { withClerkMiddleware } from '@clerk/nextjs/dist/edge';
+import { withClerkMiddleware } from "@clerk/nextjs/dist/edge"
 import { NextResponse } from 'next/server';
 
-export default withClerkMiddleware((req) => {
+export default withClerkMiddleware(() => {
   return NextResponse.next();
 });
 
