@@ -1,15 +1,9 @@
 import { authMiddleware } from "@clerk/nextjs";
-import { NextResponse } from "next/server";
 
 export default authMiddleware({
-  publicRoutes: ["/", "/api/webhook(.*)"], // add your public routes here
+  publicRoutes: ["/"], // Add your public routes if needed
 });
 
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)"], // protects all routes except static files
+  matcher: ["/((?!_next|.*\\..*).*)"],
 };
-
-
-
-
-
